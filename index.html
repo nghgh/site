@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Тесты</title>
+    <link type="text/css" rel="stylesheet" href="{{url_for('static', filename='style.css')}}"/>
+</head>
+<body>
+  <div class="button-container">
+      {% if username %}
+          <p>Привет, {{ username }}! <a href="{{ url_for('выход') }}">Выйти</a></p>
+      {% else %}
+          <a href="{{ url_for('регистрация') }}" class="button2">Регистрация</a>
+      {% endif %}
+      <a href="{{ url_for('авторизация') }}" class="button">Авторизация</a>
+      <a href="{{ url_for('профиль') }}" class="button">Профиль</a>
+      <a href="{{ url_for('загрузка') }}" class="button">Загрузить</a>
+      <a href="{{ url_for('работы') }}" class="button">Посмотреть работы</a>
+  </div>
+</body>
+</html>
