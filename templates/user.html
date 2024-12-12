@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Профиль</title>
+    <link type="text/css" rel="stylesheet" href="{{url_for('static', filename='style.css')}}"/>
+</head>
+<body>
+    <h1>Профиль пользователя: {{ username }}</h1>
+    <div class="profile-section">  <!-- Added a container -->
+        <h2>Ваши работы:</h2>
+        <div class="user-works">
+            {% if user_images %}
+                <div class="image-gallery">
+                    {% for filename in user_images %}
+                        <img src="{{ url_for('uploaded_file', filename=filename) }}" alt="{{ filename }}">
+                    {% endfor %}
+                </div>
+            {% else %}
+                <p class="no-works">Вы еще не загрузили ни одной работы.</p>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>
