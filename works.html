@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Работы</title>
+    <link type="text/css" rel="stylesheet" href="{{url_for('static', filename='style.css')}}"/>
+</head>
+<body>
+    <h1>Загруженные работы</h1>
+    {% if uploaded_files %}
+        <div class="image-gallery">
+        {% for filename in uploaded_files %}
+            <img src="{{ url_for('uploaded_file', filename=filename) }}" alt="{{ filename }}">
+        {% endfor %}
+        </div>
+    {% else %}
+        <p>Нет загруженных работ.</p>
+    {% endif %}
+</body>
+</html>
+
