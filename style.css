@@ -1,0 +1,71 @@
+body {
+  font-family: 'comic sans ms', sans-serif;
+  font-weight: normal;
+  line-height: 1.6;
+  color: #fff;
+  cursor: pointer;
+  min-height: 100vh;
+  margin: 0;
+  background: linear-gradient(to right, #232323, #383838);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column; /* Кнопки вертикально */
+  align-items: center; /* Центрирование по вертикали */
+  gap: 15px;
+}
+
+.button, .button2 { /* Apply styles to both button classes */
+  width: 190px;  /* Adjust width as needed for button2 */
+  border: 10px solid #272727;
+  padding: 6px;
+  border-radius: 25px;
+  background-color: #303030;
+  height: 35px;
+  line-height: 35px;
+  cursor: pointer;
+  text-align: center;
+  color: white; /* Explicitly set text color to white */
+  text-decoration: none; /* Remove default link underline */
+}
+
+.button2 {
+  width: 290px;
+  height: 65px;
+}
+
+.image-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.image-gallery img {
+  width: 200px;
+  height: auto;
+  margin: 10px;
+}
+.profile-section {
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  align-items: flex-start; /* Align items to the left */
+  gap: 20px;             /* Add space between elements */
+}
+.image-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.image-gallery img {
+  width: 200px;
+  height: auto;
+  margin: 10px;
+}
+.no-works {
+    font-style: italic; /*Optional styling*/
+}
